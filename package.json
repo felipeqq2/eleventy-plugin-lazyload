@@ -10,6 +10,11 @@
 		"lazyload",
 		"eleventy-plugin"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/felipeqq2/eleventy-plugin-lazyload.git"
+	},
+	"homepage": "https://github.com/felipeqq2/eleventy-plugin-lazyload#readme",
 	"scripts": {
 		"format": "prettier -w .",
 		"format:ci": "prettier -c .",
