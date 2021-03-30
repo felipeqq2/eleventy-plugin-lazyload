@@ -1,0 +1,64 @@
+name: Test
+
+on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - '.gitignore'
+
+env:
+  NODE_ENV: ci
+
+jobs:
+  format:
+    name: Check formatting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install prettier
+        run: npm i prettier
+
+      - name: Format
+        run: npm run format:ci
+
+  lint:
+    name: Lint code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install eslint
+        run: npm i eslint eslint-config-prettier eslint-plugin-ava
+
+      - name: Lint
+        run: npm run lint
+
+  test:
+    name: Test with ava
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install ava and cheerio
+        run: npm i ava cheerio
+
+      - name: Test
+        run: npm run test
