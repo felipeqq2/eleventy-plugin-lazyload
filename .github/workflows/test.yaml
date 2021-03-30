@@ -7,9 +7,12 @@ on:
       - 'README.md'
       - 'LICENSE'
       - '.gitignore'
-
-env:
-  NODE_ENV: ci
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - '.gitignore'
 
 jobs:
   format:
