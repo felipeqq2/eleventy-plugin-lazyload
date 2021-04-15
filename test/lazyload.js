@@ -1,6 +1,6 @@
 const test = require('ava')
 const cheerio = require('cheerio')
-const lazyLoad = require('./main')
+const lazyLoad = require('../main')
 
 /**
  *
@@ -19,10 +19,10 @@ function randomString(length) {
 }
 
 function load(entry) {
-	return cheerio.load(lazyLoad(entry))
+	return cheerio.load(lazyLoad(entry, { alt: true }))
 }
 
-///// TESTS
+///! TESTS
 
 /// Single img tag
 test('single img tag with no attributes', (t) => {

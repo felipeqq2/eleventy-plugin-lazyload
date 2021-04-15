@@ -21,7 +21,9 @@ Then update your Eleventy configuration file (usually `.eleventy.js`):
 const lazyloadPlugin = require('eleventy-plugin-lazyload')
 
 module.exports = function (eleventyConfig) {
-	eleventyConfig.addPlugin(lazyloadPlugin)
+	eleventyConfig.addPlugin(lazyloadPlugin, {
+		alt: false, // if enabled, adds an empty alt attribute on images that don't have it
+	})
 }
 ```
 

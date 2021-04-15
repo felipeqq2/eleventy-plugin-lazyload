@@ -1,13 +1,15 @@
 const lazyLoad = require('./main.js')
 
-/**
- *
- * @param {Object} config
- */
-module.exports = function (config) {
+module.exports.configFunction = (config, options = {}) => {
+	options = Object.assign(
+		{
+			alt: false,
+		},
+		options
+	)
 	config.addTransform('lazyload', async (content, outputPath) => {
 		if (outputPath && outputPath.endsWith('.html')) {
-			return lazyLoad(content)
+			return lazyLoad(content, options)
 		}
 		return content
 	})
