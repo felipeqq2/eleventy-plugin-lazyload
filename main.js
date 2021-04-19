@@ -16,7 +16,7 @@ module.exports = (content, options) => {
 
 	if (options.alt) {
 		$('img').attr('alt', (_, attr) => {
-			if (!attr) return ' '
+			if (!attr) return ''
 			return attr
 		})
 	}

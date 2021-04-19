@@ -14,7 +14,7 @@ test('single img tag with no attributes', (t) => {
 	let $ = load(entry, true)
 
 	t.is($('img').attr('loading'), 'lazy')
-	t.is($('img').attr('alt'), ' ')
+	t.is($('img').attr('alt'), '')
 })
 
 test('single img tag with no attributes, option off', (t) => {
@@ -47,7 +47,7 @@ test('multiple img tags', (t) => {
 
 	t.is($('img').attr('loading'), 'lazy')
 	t.is($('#first').attr('alt'), 'alt')
-	t.is($('#second').attr('alt'), ' ')
+	t.is($('#second').attr('alt'), '')
 })
 
 test('multiple img tags, option off', (t) => {
