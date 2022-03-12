@@ -1,0 +1,15 @@
+{
+	"extends": ["config:base"],
+	"labels": ["dependencies"],
+	"lockFileMaintenance": {
+		"enabled": true,
+		"schedule": "before 3am on the first day of the month"
+	},
+	"packageRules": [
+		{
+			"matchUpdateTypes": ["lockFileMaintenance", "minor", "patch"],
+			"automerge": true,
+			"automergeType": "branch"
+		}
+	]
+}
