@@ -30,11 +30,11 @@
 		"cheerio": "^1.0.0-rc.5"
 	},
 	"devDependencies": {
-		"ava": "^4.0.0",
-		"eslint": "^8.0.1",
-		"eslint-config-prettier": "^8.1.0",
-		"eslint-plugin-ava": "^13.0.0",
-		"prettier": "^2.2.1"
+		"ava": "4.0.1",
+		"eslint": "8.10.0",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-plugin-ava": "13.2.0",
+		"prettier": "2.5.1"
 	},
 	"volta": {
 		"node": "14.17.6",
