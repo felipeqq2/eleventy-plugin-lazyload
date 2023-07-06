@@ -35,9 +35,5 @@
 		"eslint-config-prettier": "8.8.0",
 		"eslint-plugin-ava": "14.0.0",
 		"prettier": "3.0.0"
-	},
-	"volta": {
-		"node": "18.16.1",
-		"npm": "9.7.2"
 	}
 }
