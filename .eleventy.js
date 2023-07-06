@@ -5,7 +5,7 @@ module.exports.configFunction = (config, options = {}) => {
 		{
 			alt: false,
 		},
-		options
+		options,
 	)
 	config.addTransform('lazyload', async (content, outputPath) => {
 		if (outputPath && outputPath.endsWith('.html')) {
