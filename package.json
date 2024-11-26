@@ -34,6 +34,6 @@
 		"eslint": "9.15.0",
 		"eslint-config-prettier": "9.1.0",
 		"eslint-plugin-ava": "15.0.1",
-		"prettier": "3.3.3"
+		"prettier": "3.4.1"
 	}
 }
