@@ -33,7 +33,7 @@
 		"ava": "6.4.1",
 		"eslint": "9.39.4",
 		"eslint-config-prettier": "10.1.8",
-		"eslint-plugin-ava": "15.1.0",
+		"eslint-plugin-ava": "16.0.1",
 		"prettier": "3.8.1"
 	}
 }
